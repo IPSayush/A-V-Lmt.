@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pehrin | Luxury Home Essentials</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hero-height {
+            height: 90vh;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .menu-item::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: currentColor;
+            transition: width .3s;
+        }
+        
+        .menu-item:hover::after {
+            width: 100%;
+        }
+        
+        .scroll-hidden {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-serif font-bold tracking-wider">A & V Lmt.</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="menu-item font-medium">Shop</a>
+                    <a href="#" class="menu-item font-medium">Collections</a>
+                    <a href="#" class="menu-item font-medium">About</a>
+                    <a href="#" class="menu-item font-medium">Journal</a>
+                </div>
+                
+                <!-- Right Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="p-2">
+                        <i data-feather="search"></i>
+                    </a>
+                    <a href="#" class="p-2">
+                        <i data-feather="user"></i>
+                    </a>
+                    <a href="#" class="p-2">
+                        <i data-feather="shopping-bag"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button type="button" class="p-2 rounded-md" aria-controls="mobile-menu" aria-expanded="false">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Shop</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Collections</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Journal</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-height w-full relative flex items-center justify-center overflow-hidden">
+        <div id="vanta-bg" class="absolute inset-0"></div>
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 text-white">Elevated Living</h1>
+            <p class="text-xl md:text-2xl mb-8 text-white max-w-2xl mx-auto">Thoughtfully designed home essentials for modern life</p>
+            <a href="#" class="inline-block px-8 py-3 bg-white text-gray-900 font-medium rounded-sm hover:bg-gray-100 transition duration-300">Shop Now</a>
+        </div>
+    </section>
+    
+    <!-- Featured Collections -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-12">Our Collections</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Collection 1 -->
+                <div class="group relative overflow-hidden h-96">
+                    <img src="http://static.photos/minimal/640x360/1" alt="Bedding Collection" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-300 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-serif font-bold">Bedding</h3>
+                    </div>
+                    <a href="#" class="absolute inset-0"></a>
+                </div>
+                
+                <!-- Collection 2 -->
+                <div class="group relative overflow-hidden h-96">
+                    <img src="http://static.photos/minimal/640x360/2" alt="Bath Collection" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-300 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-serif font-bold">Bath</h3>
+                    </div>
+                    <a href="#" class="absolute inset-0"></a>
+                </div>
+                
+                <!-- Collection 3 -->
+                <div class="group relative overflow-hidden h-96">
+                    <img src="http://static.photos/minimal/640x360/3" alt="Tabletop Collection" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-300 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-serif font-bold">Tabletop</h3>
+                    </div>
+                    <a href="#" class="absolute inset-0"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-12">Featured Products</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="group relative">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="http://static.photos/minimal/640x360/4" alt="Linen Duvet Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="product-overlay absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <button class="bg-white px-6 py-2 font-medium rounded-sm">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-medium">Linen Duvet Cover</h3>
+                        <p class="text-gray-600">$198.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="group relative">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="http://static.photos/minimal/640x360/5" alt="Organic Cotton Towel Set" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="product-overlay absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <button class="bg-white px-6 py-2 font-medium rounded-sm">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-medium">Organic Cotton Towel Set</h3>
+                        <p class="text-gray-600">$98.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="group relative">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="http://static.photos/minimal/640x360/6" alt="Stoneware Dinner Plate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="product-overlay absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <button class="bg-white px-6 py-2 font-medium rounded-sm">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-medium">Stoneware Dinner Plate</h3>
+                        <p class="text-gray-600">$48.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="group relative">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="http://static.photos/minimal/640x360/7" alt="Wool Throw Blanket" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="product-overlay absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <button class="bg-white px-6 py-2 font-medium rounded-sm">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-medium">Wool Throw Blanket</h3>
+                        <p class="text-gray-600">$248.00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-8 py-3 border border-gray-800 text-gray-800 font-medium rounded-sm hover:bg-gray-800 hover:text-white transition duration-300">View All Products</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Journal Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold text-center mb-12">From The Journal</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="group">
+                    <div class="aspect-[4/3] overflow-hidden mb-4">
+                        <img src="http://static.photos/minimal/640x360/8" alt="Article Image" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="text-sm text-gray-500 mb-2">September 12, 2023</div>
+                    <h3 class="text-xl font-serif font-bold mb-2 group-hover:underline">The Art of Layering Bedding</h3>
+                    <p class="text-gray-600">Discover how to create the perfect layered bed for ultimate comfort and style.</p>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="group">
+                    <div class="aspect-[4/3] overflow-hidden mb-4">
+                        <img src="http://static.photos/minimal/640x360/9" alt="Article Image" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="text-sm text-gray-500 mb-2">August 28, 2023</div>
+                    <h3 class="text-xl font-serif font-bold mb-2 group-hover:underline">Sustainable Home Textiles</h3>
+                    <p class="text-gray-600">Learn about our commitment to sustainable materials and ethical production.</p>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="group">
+                    <div class="aspect-[4/3] overflow-hidden mb-4">
+                        <img src="http://static.photos/minimal/640x360/10" alt="Article Image" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="text-sm text-gray-500 mb-2">August 15, 2023</div>
+                    <h3 class="text-xl font-serif font-bold mb-2 group-hover:underline">Hosting the Perfect Dinner Party</h3>
+                    <p class="text-gray-600">Tips and tricks for creating an unforgettable tablescape for your guests.</p>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-8 py-3 border border-gray-800 text-gray-800 font-medium rounded-sm hover:bg-gray-800 hover:text-white transition duration-300">View All Articles</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold mb-4">Join Our Community</h2>
+            <p class="text-gray-600 mb-8">Sign up for our newsletter to receive updates on new collections, exclusive offers, and design inspiration.</p>
+            
+            <form class="flex max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border border-gray-300 focus:outline-none focus:border-gray-800">
+                <button type="submit" class="bg-gray-800 text-white px-6 py-3 font-medium hover:bg-gray-700 transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="font-serif font-bold text-lg mb-4">PEHRIN</h3>
+                    <p class="text-gray-400 mb-4">Thoughtfully designed home essentials for modern life.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"><i data-feather="instagram"></i></a>
+                        <a href="#"><i data-feather="facebook"></i></a>
+                        <a href="#"><i data-feather="twitter"></i></a>
+                        <a href="#"><i data-feather="pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-medium mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Bedding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Bath</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tabletop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home Decor</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-medium mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Story</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sustainability</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Journal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stockists</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-medium mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Store Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Payment Methods</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Pehrin. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xffffff,
+            backgroundColor: 0x0,
+            points: 12.00,
+            maxDistance: 24.00,
+            spacing: 19.00
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
