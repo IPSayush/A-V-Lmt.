@@ -1,1 +1,1 @@
-![Uploading ipsayush.github.io_A-V-Lmt._.png…]()
+![A-V-Lmt Preview] (./A-V-Lmt.png)
